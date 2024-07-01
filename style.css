@@ -1,0 +1,278 @@
+    /*  Google CDN font link */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap');
+
+    /* body{
+        overflow-x: hidden; 
+    } */
+    
+    /*  variables */
+    :root{
+        --color-text: #fff;
+        --color-other:#f44336;
+        --color-p:#777;
+    }
+    /* universal selector */
+    *{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        list-style-type:none;
+        font-family: "Poppins", sans-serif;
+    }
+
+    /*   header section */
+    .header{
+        min-height: 100vh;
+        width:100%;  
+        /* background-image: url(images/banner.png); */
+        background-image: linear-gradient( rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/banner.png) ; 
+        background-position:center; 
+        background-size: cover;
+        position: relative;
+        overflow:hidden;
+    }
+
+    /*  navigation section */
+    .nav-section{
+        padding: 2% 6%;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .nav-section img{
+        width: 180px;
+    }
+    /* .nav-links ul{
+        display: flex;
+        gap: 3dvw;
+
+    }*/
+    .nav-links a{
+        color: var(--color-text);
+    } 
+    .nav-links{
+        flex:1;
+        text-align: right;
+    }
+    .nav-links li{
+        display: inline-block;
+        padding: 8px 20px;
+        position: relative;
+        
+    }
+    
+    .nav-links li::after{
+        content: "";
+        width:0%;
+        height: 2px;
+        background-color: var(--color-other);
+        margin:auto;
+        display: block;
+        transition: 0.5s; 
+    }
+    .nav-links li:hover::after{
+        width: 100%;
+    }
+
+    /*  Text box */
+    .text-box{
+        width:90%;
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    .text-box h1{
+        font-size: 62px;
+        color: var(--color-text);
+    }
+    .text-box p{
+        color:var(--color-text);
+        font-size: 14px;
+        margin: 10px 0px 40px 0px;
+    }
+    .text-box .hero-btn{
+        border:1px solid var(--color-text);
+        color: var(--color-text);
+        padding: 12px 34px;
+        display: inline-block;
+        font-size: 13px;
+        background: transparent;
+        position: relative;
+        cursor: pointer;
+        transition:1s;
+    }
+    .text-box .hero-btn:hover{
+        border-color: var(--color-other);
+        background-color: var(--color-other);
+        
+    }
+    nav .fa-solid{
+        display: none;
+    }
+
+    /*  media Query */
+    @media(max-width:700px){
+        .text-box h1{
+            font-size:20px;
+        }
+        .nav-links li{
+            display: block;
+        }
+        .text-box p{
+            font-weight: 300;
+        }
+        .nav-links{
+            height: 100vh;
+            text-align: left;
+            width:200px;
+            position: absolute;
+            top:0px;
+            right:0px;
+            background-color: var(--color-other);
+            z-index:2;
+            right:-200px;  
+            /* visibility: hidden; */
+            transition:1s;
+            
+            
+        }
+
+        /*  menu icons visible */
+        nav .fa-solid{
+            display: block;
+            margin:10px;
+            color: var(--color-text);
+            font-size: 22px;
+            cursor:pointer;
+        }
+        .nav-links ul{
+            padding:30px;
+        }
+
+    }
+
+    /*  course-section */
+    .course-section{
+        width: 80%;
+        margin:auto;
+        text-align:center;
+        margin-top:100px;
+    }
+    .course-section h1{
+        font-size: 36px;
+        font-weight:600;
+    }
+    .course-section p{
+        color: var(--color-p);
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 22px; 
+        padding: 10px;
+    }
+
+    /*  course content */
+    .row{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5%;
+        /* gap:2%; */
+    }
+    .colum{
+        background-color: #fff3f3;
+        padding:20px 12px;
+        /* margin:0px 12px 0px 12px; */
+        box-sizing: border-box;
+        border-radius: 10px;
+        margin-bottom: 5%;
+        flex-basis: 31%;  
+        transition: 0.5s;
+    }
+    .row .colum h3{
+        font-weight: 600; 
+        margin:10px 0px;
+    }
+    .colum:hover{
+        box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+        
+    }
+
+    /* media query */
+    @media screen and (max-width: 700px){
+        .row{
+            flex-direction:column;
+        }
+        .course-section p{
+            cursor:none;
+        }
+    }
+
+    /*  campus-section  */
+    .campus-section{
+        padding-top: 50px;
+        width:80%;
+        margin:auto;
+        text-align: center;
+    
+    }
+    .campus-section h1{
+        font-size: 36px;
+        font-weight: 600;
+    }
+    .campus-section p{
+        color: var(--color-p);
+        font-weight: 300;
+        font-size: 14px;
+        padding: 10px; 
+        line-height: 22px; 
+    }
+    .campus-col{
+        flex-basis: 32%;
+        position: relative;
+        overflow:hidden;
+        border-radius: 10px;
+        margin-bottom:30px;
+       
+
+    }
+    .campus-col img{
+        width:100%; 
+        
+        display: block;
+        /* object-fit: cover; */
+    }
+    .layer{
+        background-color: transparent;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        /* border-radius: 10px; */
+        /* visibility: hidden; */
+        transition: 0.5s;
+    }
+    .layer h3{
+        text-transform: uppercase;
+        width:100%;
+        color:var(--color-text);
+        font-weight: 500;
+        font-size: 26px;
+        position: absolute;
+        bottom: 0%;
+        left:50%;
+        transform:translateX(-50%);
+        transition: 0.5s;
+        opacity: 0;
+    }
+    .layer:hover{
+        /* visibility: visible; */
+        background-color: rgba(226, 0, 0, 0.7);
+    }
+    .layer:hover h3{
+        bottom: 50%;
+        opacity: 1;
+    }
+    

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Eduford</title>
+    <!--  font ausome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <section class="header">
+        <nav class="nav-section">
+            <a href="index.html"> <img src="images/logo.png" alt=""></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">COURSE</a></li>
+                    <li><a href="#">BLOG</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>World's Biggest University</h1>
+            <p>Making website is now one of the easiest thing in the world. You just need to learn HTML, CSS, <br>Javascript and you are good to go.</p>
+            <a href="#" class="hero-btn">Visit Us To Know More</a>
+        </div>
+
+        <!--  JavaScript code -->
+          <script>
+            var s = document.getElementById("navLinks");
+            function showMenu() {
+                navLinks.style.right= "0px"; 
+                /* navLinks.style.visibility= "visible"; */
+            }
+
+            function hideMenu() {
+                navLinks.style.right= "-200px"; 
+               /* navLinks.style.visibility= "hidden";  */
+            }
+
+          </script>
+    </section>
+    <section class="course-section">
+        <h1>Courses We Offer</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <div class="row">
+            <div class="colum">
+                <h3>Intermediate</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia corrupti quibusdam repudiandae, totam error asperiores sit deleniti quo facilis quam ullam sapiente doloribus esse dolores.</p>
+            </div>
+            <div class="colum">
+                <h3>Degree</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia corrupti quibusdam repudiandae, totam error asperiores sit deleniti quo facilis quam ullam sapiente doloribus esse dolores.</p>
+            </div>
+            <div class="colum">
+                <h3>Post Graduation</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia corrupti quibusdam repudiandae, totam error asperiores sit deleniti quo facilis quam ullam sapiente doloribus esse dolores.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Campus section -->
+     <section class="campus-section">
+        <h1>Our Global Campus</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <div class="row">
+            <div class="campus-col">
+                <img src="images/london.png" >
+                <div class="layer">
+                    <h3>LONDON</h3>
+                </div>
+            </div>
+
+            <div class="campus-col">
+                <img src="images/newyork.png" >
+                <div class="layer">
+                    <h3>NEW YORK</h3>
+                </div>
+            </div>
+
+            <div class="campus-col">
+                <img src="images/washington.png" >
+                <div class="layer">
+                    <h3>washington</h3>
+                </div>
+            </div>
+
+        </div>
+
+     </section>
+</body>
+</html>
